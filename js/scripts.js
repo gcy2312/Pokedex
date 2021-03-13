@@ -41,10 +41,17 @@ let pokemonList=[
   abilities: ["static", "lightningrod"]
   },
 
+  {name: "Slowpoke",
+  height: 1.2,
+  weight: 36,
+  type: ["psychic", "water"],
+  abilities: ["oblivious", "own-tempo", "regenerator"]
+  },
+
   {name:"",
   height:,
   weight:,
   type:[],
   abilities:[]
-  },
+  }
 ]
