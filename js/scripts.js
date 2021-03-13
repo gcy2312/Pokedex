@@ -1,4 +1,4 @@
-let pokemonList [
+let pokemonList[
   {name: "Bulbasaur",
   height: 0.7,
   weight: 6.9,
