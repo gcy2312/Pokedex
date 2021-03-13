@@ -48,10 +48,10 @@ let pokemonList=[
   abilities: ["oblivious", "own-tempo", "regenerator"]
   },
 
-  {name:"",
-  height:,
-  weight:,
-  type:[],
-  abilities:[]
+  {name: "Graveler",
+  height: 1,
+  weight: 105,
+  type: ["rock", "ground"],
+  abilities: ["sturdy", "sand-veil", "rock-head"]
   }
 ]
