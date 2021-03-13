@@ -34,11 +34,11 @@ let pokemonList=[
   abilities: ["intimidate", "shed-skin", "unnerve"]
   },
 
-  {name:"",
-  height:,
-  weight:,
-  type:[],
-  abilities:[]
+  {name: "Pikachu",
+  height: 0.4,
+  weight: 6,
+  type: "electric",
+  abilities: ["static", "lightningrod"]
   },
 
   {name:"",
