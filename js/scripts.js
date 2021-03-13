@@ -26,4 +26,25 @@ let pokemonList=[
   type: ["bug", "poison"],
   abilities: ["sheild-dust", "run-away"]
   },
+
+  {name: "Ekans",
+  height: 2,
+  weight: 6.9,
+  type: "poison",
+  abilities: ["intimidate", "shed-skin", "unnerve"]
+  },
+
+  {name:"",
+  height:,
+  weight:,
+  type:[],
+  abilities:[]
+  },
+
+  {name:"",
+  height:,
+  weight:,
+  type:[],
+  abilities:[]
+  },
 ]
