@@ -13,10 +13,10 @@ let pokemonList [
   abilities:["blaze", "solar-power"]
   }
 
-  {name:"",
-  height:,
-  weight:,
-  type:[],
-  abilities:[]
+  {name: "Squirtle",
+  height: 0.5,
+  weight: 9,
+  type: "water",
+  abilities:["rain-dish", "torrent"]
   }
 ]
