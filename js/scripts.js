@@ -6,11 +6,11 @@ let pokemonList [
   abilities: ["chlorophyll", "overegrow"]
   }
 
-  {name:"",
-  height:,
-  weight:,
-  type:[],
-  abilities:[]
+  {name: "Charmander",
+  height: 0.6,
+  weight: 8.5,
+  type: "fire",
+  abilities:["blaze", "solar-power"]
   }
 
   {name:"",
