@@ -86,8 +86,9 @@ for (let i= 0; i < pokemonList.length; i++){
 
   //conditional big and small additional text
   if(pokemonList[i].height > 1.5){
-    document.write('Wow, that\'s a BIG pokemon!')
+    document.write(' Wow, that\'s a BIG pokemon!')
   }else if(pokemonList[i].height < 0.4){
-    document.write('Awww, so cute and tiny!')
+    document.write(' Awww, so cute and tiny!')
   }
+  document.write("<br>")
 }
