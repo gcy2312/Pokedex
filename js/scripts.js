@@ -82,5 +82,12 @@ let pokemonList=[
 
 //loop to display pokemon names and height
 for (let i= 0; i < pokemonList.length; i++){
-  document.write(pokemonList[i].name + " " + '(height: ' + pokemonList[i].height + ')' + "<br>")
+  document.write(pokemonList[i].name + " " + '(height: ' + pokemonList[i].height + ')')
+
+  //conditional big and small additional text
+  if(pokemonList[i].height > 1.5){
+    document.write('Wow, that\'s a BIG pokemon!')
+  }else if(pokemonList[i].height < 0.4){
+    document.write('Awww, so cute and tiny!')
+  }
 }
