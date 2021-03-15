@@ -1,22 +1,13 @@
 /* style */
+:root{
+  --header-bg-color:;
+  --header-text-color:;
+  --bg-color:;
+  --btn-color:;
 
+}
 /* navigation design */
-ul {
-  display: flex;
-  justify-content: space-between;
-}
-.nav-item{
-  display: inline-block;
-}
-.form-inline{
-  display: flex;
-  float: right;
-}
-.btn {
-  padding: 10px;
-  color:#111;
-  width: fit-content;
-}
+
 /* header design */
 .header{
 
