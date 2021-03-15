@@ -1,14 +1,67 @@
 /* style */
 :root{
-  --header-bg-color:;
-  --header-text-color:;
-  --bg-color:;
-  --btn-color:;
-
+  --header-bg-color: 	#9bbc0f;
+  --header-text-color: #0f380f;
+  --text-color: #000;
+  --bg-color:	#bbbbbb;
+  --btn-color: #bbbbbb;
+  --header-size: 36px;
+  --header-weight: 600;
+  --title-font: 'Press Start 2P';
+  --text-font: 'Share Tech Mono';
+  --text-size: 30;
+  --text-weight: 400;
 }
-/* navigation design */
 
-/* header design */
-.header{
+/* nav styke */
+.navbar-light{
+  background-color:	var(--header-bg-color);
+}
 
+.navbar-brand{
+  color: var(--text-color);
+  font-family: var(--title-font);
+  font-size: var(--header-size);
+}
+
+.btn-outline-success{
+  font-family: var(--title-font);
+  font-size: var(--text-size);
+  color: var(--text-color);
+  border-color: var(--text-color);
+  transition: none;
+  transition-duration: 0.2s;
+  transition-property: opacity;
+}
+
+.btn-outline-success:hover, .btn-outline-success:focus, .btn-outline-success:active, .btn-outline-success:focus-within, .btn-outline-success:focus-visible, .btn-outline-success:target, .btn-outline-success:visited{
+  curson: pointer;
+  opacity: 0.8;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-color: var(--text-color);
+  transition: none
+}
+
+.form-control me-2{
+  background-color: var(--bg-color);
+}
+
+input::placeholder{
+  font-family: var(--text-font);
+}
+
+h3{
+  font-family: var(--title-font);
+  color: var(--text-color);
+  margin: 15px;
+}
+
+body{
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  font-family: var(--text-font);
+  margin: auto;
+  font-size: var(--text-size);
+  line-height: 1.3;
 }
