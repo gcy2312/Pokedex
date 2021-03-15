@@ -1,0 +1,108 @@
+/* style */
+
+/* nav style */
+.navbar-light{
+  background-color:	#9bbc0f;
+}
+
+.navbar-brand{
+  color: #000;
+  font-family: 'Press Start 2P', monospace, sans-serif;
+  font-size: 36px;
+}
+
+.btn-outline-success{
+  font-family: 'Press Start 2P', monospace, sans-serif;
+  font-size: 30;
+  color: #000;
+  border-color: #000;
+  transition: none;
+  transition-duration: 0.2s;
+  transition-property: opacity;
+}
+
+.btn-outline-success:hover{
+  curson: pointer;
+  opacity: 0.8;
+  background-color: #bbbbbb;
+  color: #000;
+  border-color: #000;
+  transition: none
+}
+
+.btn-outline-success:focus{
+  curson: pointer;
+  opacity: 0.8;
+  background-color: #bbbbbb;
+  color: #000;
+  border-color: #000;
+  transition: none
+}
+
+.btn-outline-success:active{
+  curson: pointer;
+  opacity: 0.8;
+  background-color: #bbbbbb;
+  color: #000;
+  border-color: #000;
+  transition: none
+}
+
+.btn-outline-success:focus-within{
+  curson: pointer;
+  opacity: 0.8;
+  background-color: #bbbbbb;
+  color: #000;
+  border-color: #000;
+  transition: none
+}
+
+.btn-outline-success:focus-visible{
+  curson: pointer;
+  opacity: 0.8;
+  background-color: #bbbbbb;
+  color: #000;
+  border-color: #000;
+  transition: none
+}
+
+.btn-outline-success:target{
+  curson: pointer;
+  opacity: 0.8;
+  background-color: #bbbbbb;
+  color: #000;
+  border-color: #000;
+  transition: none
+}
+
+.btn-outline-success:visited{
+  curson: pointer;
+  opacity: 0.8;
+  background-color: #bbbbbb;
+  color: #000;
+  border-color: #000;
+  transition: none
+}
+
+.form-control me-2{
+  background-color: #bbbbbb;
+}
+
+input::placeholder{
+  font-family: 'Share Tech Mono', monospace, sans-serif;
+}
+
+h3{
+  font-family: 'Press Start 2P', monospace, sans-serif;
+  color: #000;
+  margin: 15px;
+}
+
+body{
+  box-sizing: border-box;
+  background-color: #bbbbbb;
+  font-family: 'Share Tech Mono', monospace, sans-serif;
+  margin: auto;
+  font-size: 30;
+  line-height: 1.3;
+}
