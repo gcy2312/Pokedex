@@ -7,13 +7,13 @@
   --btn-color: #bbbbbb;
   --header-size: 36px;
   --header-weight: 600;
-  --title-font: 'Press Start 2P';
-  --text-font: 'Share Tech Mono';
+  --title-font: 'Press Start 2P', monospace, sans-serif;
+  --text-font: 'Share Tech Mono', monospace, sans-serif;
   --text-size: 30;
   --text-weight: 400;
 }
 
-/* nav styke */
+/* nav style */
 .navbar-light{
   background-color:	var(--header-bg-color);
 }
