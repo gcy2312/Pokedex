@@ -5,33 +5,28 @@
     <meta name="viewport" content="width=device-width", initial-scale="1">
     <title>Pokedex App</title>
 
-
-
-    <link rel="stylesheet" type="text/css" href="file:///C:/Users/gmacy/Downloads/bootstrap-5.0.0-beta2-dist/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/javascript" src="file:///C:/Users/gmacy/Downloads/bootstrap-5.0.0-beta2-dist/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
 
   <body>
     <!-- nav menu-->
-    <div class="navigation">
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-        <a href="#" class="nav-link active">Pokedex</a>
-        </li>
-        <!--li class="nav-item">
-          <a href="#" class="nav-link">About</a>
-        </li-->
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Find Your Pokemon" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="img/pokemon_icon.svg" width="50" height="50" class="d-inline-block align-top" alt="Image of Pokemon Icon"> Pokedex
+        </a>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Find Your Pokemon" aria-label="Find Your Pokemon">
+          <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
-      </ul>
-    </div>
+      </div>
+    </nav>
+
 
     <div class="header">
-      <header>Pokedex - Catch them all!!!</header>
+      <h3>Pokedex - Catch them all!!!</h3>
     </div>
 
 
