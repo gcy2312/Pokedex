@@ -81,17 +81,17 @@ let pokemonRepository = (function(){
   }
 ];
 
-function add(pokemon){
-  pokemonList.push(pokemon);
-}
-function getAll(){
-  return pokemonList;
-}
-return{
-  add: add,
-  getAll: getAll
-  };
-})()
+  function add(pokemon){
+    pokemonList.push(pokemon);
+  }
+  function getAll(){
+    return pokemonList;
+  }
+  return{
+    add: add,
+    getAll: getAll
+    };
+  })()
 
 //loop to display pokemon names and height
 function myListFunction(pokemon){
