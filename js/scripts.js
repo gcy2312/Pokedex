@@ -104,4 +104,4 @@ function myListFunction(pokemon){
   }
 };
 
-pokemonList.forEach(myListFunction);
+pokemonRepository.getAll().forEach(myListFunction);
