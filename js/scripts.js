@@ -1,4 +1,5 @@
-let pokemonList=[
+let pokemonRepository = (function(){
+  let pokemonList=[
   {name: "Bulbasaur",
   height: 0.7,
   weight: 6.9,
@@ -78,7 +79,19 @@ let pokemonList=[
   defense: 115,
   speed: 35
   }
-]
+];
+
+function add(pokemon){
+  pokemonList.push(pokemon);
+}
+function getAll(){
+  return pokemonList;
+}
+return{
+  add: add,
+  getAll: getAll
+  };
+})()
 
 //loop to display pokemon names and height
 function myListFunction(pokemon){
