@@ -1,5 +1,5 @@
 let pokemonRepository = (function(){
-  let pokemonList=[
+  let repository=[
   {name: "Bulbasaur",
   height: 0.7,
   weight: 6.9,
@@ -82,14 +82,28 @@ let pokemonRepository = (function(){
 ];
 
   function add(pokemon){
-    pokemonList.push(pokemon);
+    if(
+      typeof pokemon === "object" &&
+      "name" in pokemon &&
+      "height" in pokemon &&
+      "weight" in pokemon &&
+      "type" in pokemon &&
+      "abilities" in pokemon &&
+      "attack" in pokemon &&
+      "defense" in pokemon &&
+      "speed" in pokemon){
+      repository.push(pokemon);
+    }else{
+      console.log("pokemon is incomplete");
+    }
   }
   function getAll(){
-    return pokemonList;
+    return repository;
   }
   return{
     add: add,
     getAll: getAll
+
     };
   })()
 
