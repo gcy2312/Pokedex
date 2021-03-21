@@ -110,7 +110,16 @@ let pokemonRepository = (function(){
 
     itemPokemon.appendChild(itemButton);
     pokemonList.appendChild(itemPokemon);
+
+    itemButton.addEventListener('click', function(pokemon){
+      showDetails(pokemon);
+    })
   }
+
+  function showDetails(pokemon){
+    console.log("show Pokemon details here");
+  }
+  
   return{
     add: add,
     getAll: getAll,
