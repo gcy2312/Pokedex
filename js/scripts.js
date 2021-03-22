@@ -100,6 +100,7 @@ let pokemonRepository = (function(){
   function getAll(){
     return repository;
   }
+
   function addListItem(pokemon){
     let pokemonList = document.querySelector(".pokemon-list");
     let itemPokemon = document.createElement("li");
@@ -111,14 +112,10 @@ let pokemonRepository = (function(){
     itemPokemon.appendChild(itemButton);
     pokemonList.appendChild(itemPokemon);
 
-    itemButton.addEventListener('click', function(pokemon){
-      showDetails(pokemon);
+    itemButton.addEventListener('click', function(){
+      console.log(pokemon.name);
     })
-  }
-
-  function showDetails(pokemon){
-    console.log("show Pokemon details here");
-  }
+  };
 
   return{
     add: add,
