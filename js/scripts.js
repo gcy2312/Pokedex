@@ -112,10 +112,13 @@ let pokemonRepository = (function(){
     itemPokemon.appendChild(itemButton);
     pokemonList.appendChild(itemPokemon);
 
-    itemButton.addEventListener('click', function(){
+    itemButton.addEventListener('click', function(showDetails){
       console.log(pokemon.name);
     })
   };
+  // function showDetails(pokemon){
+  //   console.log(pokemon.name);
+  // };
 
   return{
     add: add,
