@@ -37,9 +37,6 @@ let pokemonRepository = (function(){
       showDetails(pokemon);
     })
   };
-  function showDetails(pokemon){
-    console.log(pokemon.name);
-  };
 
   function loadList(){
     return fetch(apiUrl).then (function(response){
@@ -70,6 +67,11 @@ let pokemonRepository = (function(){
       console.error(e);
     });
   }
+
+  function showDetails(pokemon){
+    console.log(pokemon.name);
+  };
+
 
   return{
     add: add,
