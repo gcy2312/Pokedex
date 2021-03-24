@@ -1,25 +1,18 @@
 let pokemonRepository = (function(){
-  let repository=[];
-  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
+  let pokemonList=[];
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
   function add(pokemon){
     if(
       typeof pokemon === "object" &&
-      "name" in pokemon &&
-      "height" in pokemon &&
-      "weight" in pokemon &&
-      "type" in pokemon &&
-      "abilities" in pokemon &&
-      "attack" in pokemon &&
-      "defense" in pokemon &&
-      "speed" in pokemon){
-      repository.push(pokemon);
+      "name" in pokemon){
+      pokemonList.push(pokemon);
     }else{
       console.log("pokemon is incomplete");
     }
   }
   function getAll(){
-    return repository;
+    return pokemonList;
   }
 
   function addListItem(pokemon){
@@ -33,10 +26,10 @@ let pokemonRepository = (function(){
     itemPokemon.appendChild(itemButton);
     pokemonList.appendChild(itemPokemon);
 
-    itemButton.addEventListener('click', function(event){
+    itemButton.addEventListener("click", function(event){
       showDetails(pokemon);
-    })
-  };
+    });
+  }
 
   function loadList(){
     return fetch(apiUrl).then (function(response){
@@ -56,10 +49,10 @@ let pokemonRepository = (function(){
 
   function loadDetails(item){
     let url = item.detailsUrl;
-    return fetch(url). then (function(reponse){
+    return fetch(url). then (function(response){
       return response.json();
     }).then (function(details){
-      item.imageUrl = detials.sprites.front_default;
+      item.imageUrl = details.sprites.front_default;
       item.height = details.height;
       item.types = details.types;
       item.abilities = details.abilities;
@@ -68,7 +61,7 @@ let pokemonRepository = (function(){
     });
   }
 
-  function showDetails(pokemon){
+  function showDetails(item){
     pokemonRepository.loadDetails(item).then(function(){
       console.log(item);
     });
