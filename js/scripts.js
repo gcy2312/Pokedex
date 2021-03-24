@@ -69,8 +69,10 @@ let pokemonRepository = (function(){
   }
 
   function showDetails(pokemon){
-    console.log(pokemon.name);
-  };
+    pokemonRepository.loadDetails(item).then(function(){
+      console.log(item);
+    });
+  }
 
 
   return{
@@ -78,7 +80,8 @@ let pokemonRepository = (function(){
     getAll: getAll,
     addListItem: addListItem,
     loadList: loadList,
-    loadDetails: loadDetails
+    loadDetails: loadDetails,
+    showDetails: showDetails
     };
   })()
 
