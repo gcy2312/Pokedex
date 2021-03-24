@@ -33,7 +33,7 @@ let pokemonRepository = (function(){
     itemPokemon.appendChild(itemButton);
     pokemonList.appendChild(itemPokemon);
 
-    itemButton.addEventListener('click', function(){
+    itemButton.addEventListener('click', function(event){
       showDetails(pokemon);
     })
   };
@@ -70,9 +70,6 @@ let pokemonRepository = (function(){
       console.error(e);
     });
   }
-
-
-
 
   return{
     add: add,
