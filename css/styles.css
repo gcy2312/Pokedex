@@ -24,12 +24,13 @@
   font-family: var(--title-font);
   font-size: var(--header-size);
 }
-
+/* search button */
 .btn-outline-success{
   font-family: var(--title-font);
   font-size: var(--text-size);
   color: var(--text-color);
   border-color: var(--text-color);
+  border-width: medium;
   transition: none;
   transition-duration: 0.2s;
   transition-property: opacity;
@@ -40,8 +41,10 @@
 .btn-outline-success:hover, .btn-outline-success:focus, .btn-outline-success:active, .btn-outline-success:focus-within, .btn-outline-success:focus-visible, .btn-outline-success:target, .btn-outline-success:visited{
   curson: pointer;
   opacity: 0.8;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color-light);
   color: var(--text-color);
+  border-style: solid;
+  border-width: medium;
   border-color: var(--text-color);
   transition: none
 }
