@@ -81,8 +81,10 @@ let pokemonRepository = (function(){
       imgElement.classList.add('pokemon-img');
       imgElement.src = pokemon.imageUrl;
 
+      // const pokeType = pokemon.types.map(pokemon.type.name);
+
       let contentElement = document.createElement('p');
-      contentElement.innerText = pokemon.height;
+      contentElement.innerHTML = 'height: ' + pokemon.height;
 
       modal.appendChild(closeButtonElement);
       modal.appendChild(titleElement);
