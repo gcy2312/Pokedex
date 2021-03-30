@@ -79,7 +79,7 @@ let pokemonRepository = (function(){
 
       let imgElement = document.createElement('img');
       imgElement.classList.add('pokemon-img');
-      imgElement.src = pokemon.imgUrl;
+      imgElement.src = pokemon.imageUrl;
 
       let contentElement = document.createElement('p');
       contentElement.innerText = pokemon.height;
