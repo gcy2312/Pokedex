@@ -142,8 +142,8 @@ body{
   background: #fff;
   padding: 15px;
   width: 100%;
-  max-width: 700px;
-  text-align: left;
+  max-width: 500px;
+  text-align: center;
 }
 
 .modal-close {
@@ -156,11 +156,17 @@ body{
 }
 
 .modal h1 {
-  margin-top: 0;
+  margin-top: 40px;
+  float: center;
 }
 
 .modal p {
   margin-bottom: 0;
+  font-size: 25px;
+}
+
+.modal img{
+  width: 250px;
 }
 
 /* keyframes btn */
