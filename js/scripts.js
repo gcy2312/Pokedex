@@ -81,15 +81,34 @@ let pokemonRepository = (function(){
       imgElement.classList.add('pokemon-img');
       imgElement.src = pokemon.imageUrl;
 
-      // const pokeType = pokemon.types.map(pokemon.type.name);
-
-      let contentElement = document.createElement('p');
-      contentElement.innerHTML = 'height: ' + pokemon.height;
+      let heightElement = document.createElement('p');
+      heightElement.innerHTML = 'Height: ' + pokemon.height;
 
       modal.appendChild(closeButtonElement);
       modal.appendChild(titleElement);
       modal.appendChild(imgElement);
-      modal.appendChild(contentElement);
+      modal.appendChild(heightElement);
+      pokemon.types.forEach((type) =>{
+        let typesElement = document.createElement('p');
+        typesElement.innerHTML = 'Types: ' + type.type.name;
+
+        modal.appendChild(typesElement);
+      })
+
+      // pokemon.types.forEach((type) =>{
+      //   console.log(type.type.name);
+      // })
+      // let typesElement = document.createElement('p');
+      // typesElement.innerHTML = 'Types: ' + pokemon.types.type.name;
+      // modal.appendChild(typesElement);
+
+      pokemon.abilities.forEach((ability) =>{
+        let abilitiesElement = document.createElement('p');
+        abilitiesElement.innerHTML = 'Abilities: ' + ability.ability.name;
+
+        modal.appendChild(abilitiesElement);
+      })
+
       modalContainer.appendChild(modal);
 
       modalContainer.classList.add('is-visible');
