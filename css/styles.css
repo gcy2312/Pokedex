@@ -118,8 +118,8 @@ body{
   position: fixed;
   padding: 20px;
   box-sizing: border-box;
-  top: 0;
-  left: 0;
+  top: 10;
+  left: 10;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
@@ -144,6 +144,7 @@ body{
   width: 100%;
   max-width: 500px;
   text-align: center;
+  line-height: 1.2;
 }
 
 .modal-close {
@@ -162,12 +163,13 @@ body{
 }
 
 .modal p {
-  margin-bottom: 0;
-  font-size: 25px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 0.9;
 }
 
 .modal img{
-  width: 250px;
+  width: 200px;
 }
 
 /* keyframes btn */
