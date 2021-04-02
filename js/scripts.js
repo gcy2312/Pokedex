@@ -88,26 +88,20 @@ let pokemonRepository = (function(){
       modal.appendChild(titleElement);
       modal.appendChild(imgElement);
       modal.appendChild(heightElement);
-      pokemon.types.forEach((type) =>{
-        let typesElement = document.createElement('p');
-        typesElement.innerHTML = 'Types: ' + type.type.name;
 
-        modal.appendChild(typesElement);
-      })
+      //create array of types, then join types w comma
+      const typesString = pokemon.types.map((type) => type.type.name)
+      const typesJoin = typesString.join(', ')
+      let typesElement = document.createElement('p');
+      typesElement.innerHTML = 'Types: ' + typesJoin;
+      modal.appendChild(typesElement);
 
-      // pokemon.types.forEach((type) =>{
-      //   console.log(type.type.name);
-      // })
-      // let typesElement = document.createElement('p');
-      // typesElement.innerHTML = 'Types: ' + pokemon.types.type.name;
-      // modal.appendChild(typesElement);
-
-      pokemon.abilities.forEach((ability) =>{
-        let abilitiesElement = document.createElement('p');
-        abilitiesElement.innerHTML = 'Abilities: ' + ability.ability.name;
-
-        modal.appendChild(abilitiesElement);
-      })
+      //create array of abilities, then join types w comma
+      const abilitiesString = pokemon.abilities.map((ability) => ability.ability.name)
+      const abilitiesJoin = abilitiesString.join(', ')
+      let abilitiesElement = document.createElement('p');
+      abilitiesElement.innerHTML = 'Abilities: ' + abilitiesJoin;
+      modal.appendChild(abilitiesElement);
 
       modalContainer.appendChild(modal);
 
