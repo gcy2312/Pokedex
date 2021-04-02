@@ -197,6 +197,7 @@ body{
   max-width: 500px;
   text-align: center;
   line-height: 1.2;
+  /* pointer-events: none; */
 }
 
 .modal-close {
@@ -215,17 +216,18 @@ body{
   color: #0f380f;
   font-family: 'Press Start 2P', monospace, sans-serif;
   font-size: 30px;
+  text-transform: uppercase;
 }
 
 .modal p {
   margin-bottom: 15px;
-  font-size: 18px;
-  line-height: 0.8;
+  font-size: 22px;
+  line-height: 1.2;
   color:#0f380f;
 }
 
 .modal img{
-  width: 200px;
+  width: 50%;
 }
 
 /* keyframes btn */
