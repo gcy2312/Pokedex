@@ -17,12 +17,13 @@ let pokemonRepository = (function(){
   }
 
   function addListItem(pokemon){
-    let pokemonList = document.querySelector(".pokemon-list");
+    let pokemonList = document.querySelector(".list-group");
     let itemPokemon = document.createElement("li");
+    itemPokemon.classList.add("group-list-item")
     let itemButton = document.createElement("button");
 
     itemButton.innerText = pokemon.name;
-    itemButton.classList.add("item-btn");
+    itemButton.classList.add("btn", "btn-warning", "btn-lg");
 
     itemPokemon.appendChild(itemButton);
     pokemonList.appendChild(itemPokemon);
