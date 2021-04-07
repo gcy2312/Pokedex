@@ -18,7 +18,7 @@
 
   <body>
     <!-- nav bar  -->
-    <nav class="navbar navbar-light">
+    <nav class="navbar navbar-epand-lg navbar-light">
       <a class="navbar-brand">
         <img src="img/pokemon_icon.svg" width="60" height="60" class="d-inline-block align-top" alt="Image of Pokemon Icon">  Pokedex
       </a>
@@ -31,33 +31,30 @@
 
 <!--page header-->
     <div class="header">
-      <h3>Pokedex - Catch them all!!!</h3>
+      <h4>Pokedex - Catch them all!!!</h4>
     </div>
 
     <div>
       <ul class="list-group"></ul>
 
-      <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Launch demo modal</button>
-
-      <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+      <div id="myModal" class="modal custom fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
-              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              <h4 class="modal-title" id="myModalLabel"></h4>
             </div>
             <div class="modal-body">
               ...
             </div>
-            <div class="modal-footer">
+            <!-- <div class="modal-footer">
               ...
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
-      <!-- <div id = "modal-container"></div> -->
 
     </div>
 <!-- jquery scripts -->
