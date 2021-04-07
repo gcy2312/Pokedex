@@ -1,7 +1,7 @@
 let pokemonRepository = (function(){
   let pokemonList=[];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
-  let modalContainer = document.querySelector('#modal-container');
+  let modalContainer = document.querySelector(".modal-dialog");
 
   function add(pokemon){
     if(
@@ -67,17 +67,15 @@ let pokemonRepository = (function(){
 
   function showDetails(pokemon){
     loadDetails(pokemon).then(function(){
-      modalContainer.innerHTML = ' ';
+      let modalBody = document.querySelector(".modal-body");
+      let modalTitle = document.querySelector(".modal-title");
+      let modalHeader = document.querySelector(".modal-header");
 
-      let modal = document.createElement('div');
-      modal.classList.add('modal');
+      // empty existing modal content
+      $(modalTitle).empty();
+      $(modalBody).empty();
 
-      let closeButtonElement = document.createElement('button');
-      closeButtonElement.classList.add('modal-close');
-      closeButtonElement.innerText = 'Close';
-      closeButtonElement.addEventListener('click', hideModal);
-
-      let titleElement = document.createElement('h1');
+      let titleElement = document.createElement('h3');
       titleElement.innerText = pokemon.name;
 
       let imgElement = document.createElement('img');
@@ -87,47 +85,25 @@ let pokemonRepository = (function(){
       let heightElement = document.createElement('p');
       heightElement.innerHTML = 'Height: ' + pokemon.height;
 
-      modal.appendChild(closeButtonElement);
-      modal.appendChild(titleElement);
-      modal.appendChild(imgElement);
-      modal.appendChild(heightElement);
+      modalTitle.appendChild(titleElement);
+      modalBody.appendChild(imgElement);
+      modalBody.appendChild(heightElement);
 
       //create array of types, then join types w comma
       const typesString = pokemon.types.map((type) => type.type.name)
       const typesJoin = typesString.join(', ')
       let typesElement = document.createElement('p');
       typesElement.innerHTML = 'Types: ' + typesJoin;
-      modal.appendChild(typesElement);
+      modalBody.appendChild(typesElement);
 
       //create array of abilities, then join types w comma
       const abilitiesString = pokemon.abilities.map((ability) => ability.ability.name)
       const abilitiesJoin = abilitiesString.join(', ')
       let abilitiesElement = document.createElement('p');
       abilitiesElement.innerHTML = 'Abilities: ' + abilitiesJoin;
-      modal.appendChild(abilitiesElement);
-
-      modalContainer.appendChild(modal);
-
-      modalContainer.classList.add('is-visible');
+      modalBody.appendChild(abilitiesElement);
     });
   }
-
-  function hideModal(){
-    modalContainer.classList.remove('is-visible');
-  }
-
-  window.addEventListener('keydown', (e) =>{
-    if(e.key === 'Escape' && modalContainer.classList.contains('is-visible')){
-      hideModal();
-    }
-  });
-
-  modalContainer.addEventListener('click', (e) =>{
-    let target = e.target;
-    if (target === modalContainer){
-      hideModal();
-    }
-  });
 
   return{
     add: add,
