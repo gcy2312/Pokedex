@@ -120,15 +120,3 @@ pokemonRepository.loadList().then(function(){
     pokemonRepository.addListItem(pokemon);
   });
 });
-
-
-//loop to display pokemon names and height
-// function myListFunction(pokemon){
-//   document.write("<p>" + pokemon.name + " " + '(height: ' + pokemon.height + ')');
-//
-//   if (pokemon.height > 1.5){
-//         document.write(' Wow, that\'s a BIG pokemon!' + "</p>")
-//   }else if (pokemon.height < 0.4){
-//         document.write(' Awww, so cute and tiny!' + "</p>")
-//   }
-// };
