@@ -1,6 +1,6 @@
 /* style */
 :root{
-  --header-bg-color: 	#9bbc0f;
+  --header-bg-color: #9bbc0f;
   --bg-color-light: #afc93e;
   --header-text-color: #0f380f;
   --text-color: #000;
@@ -10,7 +10,7 @@
   --header-weight: 600;
   --title-font: 'Press Start 2P', monospace, sans-serif;
   --text-font: 'Share Tech Mono', monospace, sans-serif;
-  --text-size: 30;
+  --text-size: 30px;
   --text-weight: 400;
 }
 
@@ -40,7 +40,7 @@
 
 /* form styling */
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success:focus-within, .btn-success:focus-visible, .btn-success:target, .btn-success:visited{
-  curson: pointer;
+  cursor: pointer;
   opacity: 0.8;
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -139,7 +139,7 @@ h3{
 .pokemon-img {
   width: 45%;
   height: auto;
-  padding: none;
+  padding: 0;
 }
 
 .modal p{
