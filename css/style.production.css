@@ -13,7 +13,7 @@
 /* search button */
 .btn-success{
   font-family: 'Press Start 2P', monospace, sans-serif;
-  font-size: 30px;
+  font-size: 24px;
   color: #000;
   border-color: #000;
   border-width: medium;
@@ -117,7 +117,7 @@ body{
   background-color: #bbbbbb;
   font-family: 'Share Tech Mono', monospace, sans-serif;
   margin: auto;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 1.3;
 }
 
