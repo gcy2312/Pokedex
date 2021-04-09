@@ -72,7 +72,7 @@ let pokemonRepository = (function(){
       // empty existing modal content
       modalBody.innerHTML = ' ';
       modalTitle.innerHTML = ' ';
-      
+
       let titleElement = document.createElement('h3');
       titleElement.innerText = pokemon.name;
 
