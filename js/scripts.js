@@ -117,4 +117,17 @@ pokemonRepository.loadList().then(function(){
   pokemonRepository.getAll().forEach(function(pokemon){
     pokemonRepository.addListItem(pokemon);
   });
+  const searchInput = document.querySelector('#search-input');
+  const buttons = document.querySelectorAll('#pokemon-list li button');
+
+  searchInput.addEventListener('keyup', event =>{
+    buttons.forEach(button =>
+    button.textContent.includes(event.target.value)
+    ?button.parentElement.style.display = 'block'
+    :button.parentElement.style.display = 'none'
+    )
+  });
+  searchInput.addEventListener('search', event => { // eslint-disable-line
+    buttons.forEach(button => button.parentElement.style.display = 'block');
+  });
 });
