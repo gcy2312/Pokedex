@@ -1,6 +1,6 @@
-let pokemonRepository = (function(){
+const pokemonRepository = (function(){
   let pokemonList=[];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+  const apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
   function add(pokemon){
     if(
@@ -17,9 +17,9 @@ let pokemonRepository = (function(){
 
   function addListItem(pokemon){
     let pokemonList = document.querySelector('.list-group');
-    let itemPokemon = document.createElement('li');
+    const itemPokemon = document.createElement('li');
     itemPokemon.classList.add('group-list-item')
-    let itemButton = document.createElement('button');
+    const itemButton = document.createElement('button');
     itemButton.setAttribute('data-toggle', 'modal');
     itemButton.setAttribute('data-target', '#myModal');
 
@@ -66,21 +66,21 @@ let pokemonRepository = (function(){
 
   function showDetails(pokemon){
     loadDetails(pokemon).then(function(){
-      let modalBody = document.querySelector('.modal-body');
-      let modalTitle = document.querySelector('.modal-title');
+      const modalBody = document.querySelector('.modal-body');
+      const modalTitle = document.querySelector('.modal-title');
 
       // empty existing modal content
       modalBody.innerHTML = ' ';
       modalTitle.innerHTML = ' ';
 
-      let titleElement = document.createElement('h3');
+      const titleElement = document.createElement('h3');
       titleElement.innerText = pokemon.name;
 
-      let imgElement = document.createElement('img');
+      const imgElement = document.createElement('img');
       imgElement.classList.add('pokemon-img');
       imgElement.src = pokemon.imageUrl;
 
-      let heightElement = document.createElement('p');
+      const heightElement = document.createElement('p');
       heightElement.innerHTML = 'Height: ' + pokemon.height;
 
       modalTitle.appendChild(titleElement);
@@ -88,17 +88,15 @@ let pokemonRepository = (function(){
       modalBody.appendChild(heightElement);
 
       //create array of types, then join types w comma
-      const typesString = pokemon.types.map((type) => type.type.name)
-      const typesJoin = typesString.join(', ')
-      let typesElement = document.createElement('p');
-      typesElement.innerHTML = 'Types: ' + typesJoin;
+      const types = pokemon.types.map(({type}) => type.name).join(', ');
+      const typesElement = document.createElement('p');
+      typesElement.innerHTML = 'Types: ' + types;
       modalBody.appendChild(typesElement);
 
       //create array of abilities, then join types w comma
-      const abilitiesString = pokemon.abilities.map((ability) => ability.ability.name)
-      const abilitiesJoin = abilitiesString.join(', ')
-      let abilitiesElement = document.createElement('p');
-      abilitiesElement.innerHTML = 'Abilities: ' + abilitiesJoin;
+      const abilities = pokemon.abilities.map(({ability}) => ability.name).join(', ');
+      const abilitiesElement = document.createElement('p');
+      abilitiesElement.innerHTML = 'Abilities: ' + abilities;
       modalBody.appendChild(abilitiesElement);
     });
   }
