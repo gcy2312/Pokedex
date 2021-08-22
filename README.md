@@ -9,6 +9,6 @@ load time).
 
 The structure of the navigation bar and modal use Bootstrap 4 framework and custom CSS styling.
 
-Dependencies:
+## Dependencies:
 Use of fetch and promise polyfills needed to load data from external API and parse JSON data
 jQuery dependent for use of Bootstrap framework
