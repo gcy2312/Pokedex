@@ -1,3 +1,7 @@
+
+
+https://user-images.githubusercontent.com/78692599/130990742-9a5cf1a1-9c8d-4b2a-9c64-3f84a0c19659.mp4
+
 # Pokedex
 Pokedex js application:
 
